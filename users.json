@@ -1,0 +1,27 @@
+{
+    "User1": {
+      "name": "Alice",
+      "age": 20,
+      "courses": [
+        { "name": "Math", "grade": "A" },
+        { "name": "Science", "grade": "B" }
+      ]
+    },
+    "User2": {
+      "name": "Bob",
+      "age": 23,
+      "courses": [
+        { "name": "History", "grade": "A" },
+        { "name": "Art", "grade": "B" }
+      ]
+    },
+    "User3": {
+      "name": "Charlie",
+      "age": 20,
+      "courses": [
+        { "name": "Math", "grade": "C" },
+        { "name": "Biology", "grade": "B" }
+      ]
+    }
+  }
+  
