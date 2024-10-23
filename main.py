@@ -26,4 +26,19 @@ with open('data3.json', 'w') as json_file:
 with open('data3.json', 'r') as file3:
     file3 = json.load(file3)
 print(json.dumps(file3, indent=2))
-    
+
+#### nested json
+import json
+
+with open('students.json', 'r') as students:
+    students_file = json.load(students)
+
+print(json.dumps(students_file, indent=2))
+
+bob_electives = students_file['students'][1]['courses']['electives']
+print("Bob's Elective Courses:", bob_electives)
+
+students_file['students'][0]['courses']['core'].append("Computer Science")
+
+with open('students.json', 'w') as file:
+    json.dump(students_file, file, indent=2)

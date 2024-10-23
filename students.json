@@ -1,0 +1,33 @@
+{
+  "students": [
+    {
+      "name": "Alice",
+      "age": 22,
+      "courses": {
+        "core": [
+          "Math",
+          "Physics",
+          "Computer Science"
+        ],
+        "electives": [
+          "Art",
+          "Music"
+        ]
+      }
+    },
+    {
+      "name": "Bob",
+      "age": 23,
+      "courses": {
+        "core": [
+          "Chemistry",
+          "Biology"
+        ],
+        "electives": [
+          "History",
+          "Geography"
+        ]
+      }
+    }
+  ]
+}
