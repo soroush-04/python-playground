@@ -5,3 +5,9 @@ data = json.loads(json_string)
 
 print(data)
 print(data['name'])
+
+
+with open('data.json', 'r') as file:
+    data2 = json.load(file)
+
+print(data2)
