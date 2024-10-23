@@ -2,26 +2,36 @@
     "User1": {
       "name": "Alice",
       "age": 20,
-      "courses": [
-        { "name": "Math", "grade": "A" },
-        { "name": "Science", "grade": "B" }
-      ]
+      "courses": {
+        "Science Faculty": [
+          { "name": "Math", "grade": "A" },
+          { "name": "Physics", "grade": "B" }
+        ],
+        "Arts Faculty": [
+          { "name": "Art", "grade": "A" },
+          { "name": "History", "grade": "B" }
+        ]
+      }
     },
     "User2": {
       "name": "Bob",
       "age": 23,
-      "courses": [
-        { "name": "History", "grade": "A" },
-        { "name": "Art", "grade": "B" }
-      ]
+      "courses": {
+        "Science Faculty": [
+          { "name": "Biology", "grade": "B" },
+          { "name": "Chemistry", "grade": "C" }
+        ]
+      }
     },
     "User3": {
       "name": "Charlie",
       "age": 20,
-      "courses": [
-        { "name": "Math", "grade": "C" },
-        { "name": "Biology", "grade": "B" }
-      ]
+      "courses": {
+        "Science Faculty": [
+          { "name": "Math", "grade": "B" },
+          { "name": "Computer Science", "grade": "A" }
+        ]
+      }
     }
   }
   

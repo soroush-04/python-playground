@@ -60,7 +60,24 @@ if bob_electives:
 else:
     print(f"{student_name} not found.")
     
-#### iterate users.json
+#### 1 iterate users.json
+# selected_users = []
+
+# with open('users.json', 'r') as file:
+#     data = json.load(file)
+
+# for user, data in data.items():
+#     if data['age'] == 20:
+#         for course in data['courses']:
+#             if course['name'] == 'Math':
+#                 selected_users.append(data)
+#                 break
+
+# print("Users with age 20 and course 'Math':")
+# for user in selected_users:
+#     print(user['name'])
+
+#### 2 iterate users.json
 selected_users = []
 
 with open('users.json', 'r') as file:
@@ -68,11 +85,43 @@ with open('users.json', 'r') as file:
 
 for user, data in data.items():
     if data['age'] == 20:
-        for course in data['courses']:
-            if course['name'] == 'Math':
-                selected_users.append(data)
+        for faculty, courses in data['courses'].items():
+            for course in courses:
+                if course['name'] == 'Math':
+                    selected_users.append(data)
+                    break
+            if data in selected_users:
                 break
+
 
 print("Users with age 20 and course 'Math':")
 for user in selected_users:
     print(user['name'])
+    
+##### iterate over dictionaries and lists
+with open('nested.json', 'r') as file:
+    data4: dict = json.load(file)
+
+for user, user_info in data4.items():
+    print(f"user: {user}")
+    for key, value in user_info.items():
+        if isinstance(value, list):
+            print(f"  {key}:")
+            for course in value:
+                course_name = course['name']
+                course_grade = course['grade']
+                course_credits = course['credits']
+                print(f"    Course: {course_name}, Grade: {course_grade}, Credits: {course_credits}")
+                
+                assignments = course.get('assignments', [])
+                if assignments:
+                    print(f"      Assignments:")
+                    for assignment in assignments:
+                        assignment_title = assignment['title']
+                        assignment_due_date = assignment['due_date']
+                        print(f"        - {assignment_title}, Due: {assignment_due_date}")
+                else:
+                    print("      No assignments.")
+        else:
+            print(f"  {key}: {value}")
+    
