@@ -18,5 +18,12 @@ data3 = {
     "courses": ["math", "science"]
 }
 json_string = json.dumps(data3, indent=4)
-
 print(json_string)
+
+with open('data3.json', 'w') as json_file:
+    json.dump(data3, json_file, indent=2)
+
+with open('data3.json', 'r') as file3:
+    file3 = json.load(file3)
+print(json.dumps(file3, indent=2))
+    
