@@ -1,0 +1,45 @@
+{
+    "User1": {
+        "name": "Alice",
+        "age": 20,
+        "courses": [
+            {
+                "name": "Math",
+                "grade": "A",
+                "credits": 3,
+                "assignments": [
+                    {"title": "Homework 1", "due_date": "2024-01-10"},
+                    {"title": "Project 1", "due_date": "2024-01-20"}
+                ]
+            },
+            {
+                "name": "Science",
+                "grade": "B",
+                "credits": 4,
+                "assignments": [
+                    {"title": "Lab Report", "due_date": "2024-01-15"}
+                ]
+            }
+        ]
+    },
+    "User2": {
+        "name": "Bob",
+        "age": 23,
+        "courses": [
+            {
+                "name": "History",
+                "grade": "A",
+                "credits": 3,
+                "assignments": [
+                    {"title": "Essay", "due_date": "2024-01-05"}
+                ]
+            },
+            {
+                "name": "Art",
+                "grade": "B",
+                "credits": 2,
+                "assignments": []
+            }
+        ]
+    }
+}

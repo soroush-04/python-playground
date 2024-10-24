@@ -1,0 +1,50 @@
+{
+    "User1": {
+        "name": "Alice",
+        "age": 20,
+        "courses": [
+            {
+                "name": "Math",
+                "grade": "A",
+                "credits": 3
+            },
+            {
+                "name": "Science",
+                "grade": "B",
+                "credits": 4
+            }
+        ]
+    },
+    "User2": {
+        "name": "Bob",
+        "age": 23,
+        "courses": [
+            {
+                "name": "History",
+                "grade": "A",
+                "credits": 3
+            },
+            {
+                "name": "Art",
+                "grade": "B",
+                "credits": 2
+            }
+        ]
+    },
+    "User3": {
+        "name": "Charlie",
+        "age": 21,
+        "courses": [
+            {
+                "name": "Math",
+                "grade": "C",
+                "credits": 3
+            },
+            {
+                "name": "Biology",
+                "grade": "A",
+                "credits": 4
+            }
+        ]
+    }
+}
