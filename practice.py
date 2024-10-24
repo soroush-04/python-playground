@@ -1,6 +1,6 @@
 import json
 
-with open('prac5.json', 'r') as file:
+with open('prac7.json', 'r') as file:
     data: dict = json.load(file)
 
 ####prac1: print each user's name and their age.
@@ -37,9 +37,22 @@ with open('prac5.json', 'r') as file:
 #         print(f"  course: {course['name']}, grade: {course['grade']}")
 
 ####prac6: print the total credits for each user based on the courses they are taking.
+# for user, user_info in data.items():
+#     print(f"user: {user_info['name']}")
+#     credits = 0
+#     for course in user_info['courses']:
+#         credits += course['credits']
+#     print(f"  credits: {credits}")
+
+####prac7: Print the name of each user.
+# For each user, print the names of their courses, their grades, and the titles of assignments along with their due dates.
+# Calculate the total number of assignments each user has across all courses.
 for user, user_info in data.items():
-    print(f"user: {user_info['name']}")
-    credits = 0
+    print(user_info['name'])
+    counter = 0
     for course in user_info['courses']:
-        credits += course['credits']
-    print(f"  credits: {credits}")
+        print(f"  {course['name']}, {course['grade']}")
+        for assignment in course['assignments']:
+            print(f"    {assignment['title']}, {assignment['due_date']}")
+            counter += 1
+    print(f"total assignments for {user_info['name']}: {counter}")
